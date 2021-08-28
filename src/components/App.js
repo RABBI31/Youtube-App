@@ -1,4 +1,5 @@
 import React from 'react';
+import './App.css';
 import youtube from '../apis/youtube';
 import Searchbar from './Searchbar';
 import Videolist from './Videolist';
@@ -9,7 +10,7 @@ class App extends React.Component {
     state = { videos: [], selectedVideo: null };
 
     componentDidMount(){
-        this.onmyInputSubmit('Buildings')
+        this.onmyInputSubmit('Programming')
     }
 
     onmyInputSubmit = async myInput => {
@@ -33,9 +34,9 @@ class App extends React.Component {
     };
     render() {
         return (
-            <div className='ui container'>
+            <div className='ui container design'>
                 <Searchbar onFormSubmit={this.onmyInputSubmit} />
-                <div className='ui grid'>
+                <div className='ui grid design1 ' >
                     <div className='ui row'>
                         <div className='eleven wide column'>
                             <VideoDetail video={this.state.selectedVideo} />
